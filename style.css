@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87ceeb; /* Sky blue background */
+}
+
+#raining-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.doughnut {
+    position: absolute;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    background-image: url('https://pngimg.com/uploads/donut/donut_PNG4.png'); /* Placeholder doughnut image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.doughnut:hover {
+    animation-play-state: paused;
+}
+
+#fact-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+#fact-popup.hidden {
+    display: none;
+}
+
+#fact-text {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+#close-popup {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
