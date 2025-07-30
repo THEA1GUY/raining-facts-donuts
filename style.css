@@ -18,12 +18,12 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    animation: fall linear infinite;
+    animation: fall linear;
 }
 
 @keyframes fall {
     to {
-        transform: translateY(100vh);
+        transform: translateY(calc(100vh + 50px)); /* 50px is max doughnut height */
     }
 }
 
